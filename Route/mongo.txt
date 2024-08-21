@@ -1,0 +1,80 @@
+sql                                                         mongo
+-----                                                     --------                                             
+
+-relational dbms                                         - document oriented no sql dbms
+-table with row and column                               -it will be a collection of json data
+-uses fixed schema                                       -dynamic schema
+-support rich set of data items                          -limited set of data items
+-declarative language                                    -expressive language based on json
+-ACID property (Automatic consistency isolation          -CAp property (consistency availability and tolerance) 
+and durability)
+-uses traditional business application                   -using bigdata and real time web application
+
+
+
+
+commands in mongodb
+----------------------------------
+-Show Database display all db's
+-use db name redirect to particular db
+-show collections:display all collections
+-find(): to get all documents from collection
+- findOne({email: password:}): prticular data
+-find().limit() to display data with a limit
+-find().sort({key:1}) sort ascending , -1 descending
+-insertMany() -insert multiple documntsx at a time
+-insertOne()  -insert single document at a time
+-updateOne() -
+-updateMany() -
+-deleteOne()
+deleteMany()
+
+
+
+Aggregation operation process multiple documents and return computed results. You can use agregation operation to
+
+grop values from multiple document together 
+perfom operation to the grouped data to return a single result 
+analysis data changes over time
+
+{
+   $lookup:
+     {
+       from: <collection to join>,
+       localField: <field from the input documents>,
+       foreignField: <field from the documents of the "from" collection>,
+       as: <output array field>
+     }
+}
+
+
+
+applying quries
+
+age greater $gt/gte    less   $lt/lte
+4AND / OR
+$eq /
+
+Mongoose
+mpngoose.module is one of the most powerffull external module of node.js mongoose is mongodb ODM 
+(object database modeling ) that is used to translate the code and its representauion from mongodb to the node js server
+
+
+Advantage of Mongoose 
+collection validation 0f the mongodb database can be done easily
+predefined struccture can be implemeted on the collection 
+contraints can be applied to document of the collection using mongoose
+
+
+
+-install mongoose npm i mongoose
+-create folder for defining details
+-create a connection file to get connection string from process.env
+-import connection to index.js
+
+schema
+
+everything in mongoose with a schema. Each schema maps to a mongoDB collection and defines the shape of the
+document within that collection
+
+it can also implement validation
